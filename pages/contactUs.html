@@ -9,7 +9,7 @@
 <style>
 
 body{
-    font-family:'Segoe UI' ,Tahoma, Geneva, verdana, sans-serif;
+    font-family:'Segoe UI', Tahoma, verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
@@ -28,6 +28,12 @@ h2{
     margin-bottom:30px;
     color:#333;
 }
+header{
+    background-color: #d6a444;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
 form{
     display:flex;
@@ -45,15 +51,38 @@ input,textarea{
     padding:10px;
 }
 
+
 </style>
 
+<body>
 
+<header>
+    <h1>AirBNB 2.0</h1>
+</header>
 
+<nav> 
+    <a href="homepage.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="locations.html">Locations</a>
+</nav>
+<div class="contanier">
+    <h2>Contact us</h2>
+    <form action="airbnb@gmail.com" method="POST" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
+        <label for="message">Message:</label>
+        <input type="message" id="message" name="message" required>
 
+        <button type="submit">Send Message</button>
 
+    </form>
 
+</div>
     
 </body>
 
