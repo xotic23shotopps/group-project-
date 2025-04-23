@@ -1,84 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: white;
-
-        }
-        header{
-            background-color: #d6a444;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav{
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 15px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,1);
-        }
-        nav a:hover{
-            color: #d6a444;
-        }
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
-        }
-        .container h1{
-            text-align: center;
-            color: #333;
-        }
-        .container P{
-            font-family: 18px;
-            line-height: 1.6;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        footer{
-            margin-top: 50px;
-        }
-
-        .footer-bg{
-            background: linear-gradient(135deg,);
-        }
-
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - AirBNB 2.0</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: url('aboutus.webp') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: darkgoldenrod;
+      z-index: 1;
+    }
+    header * {
+      position: relative;
+      z-index: 2;
+    }
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid white;
+      padding: 8px 16px;
+      border-radius: 5px;
+    }
+    .highlight {
+      color: white;
+      font-weight: bold;
+    }
+    h1.highlight {
+      font-size: 48px;
+    }
+    header h2 {
+      color: white;
+    }
+    .section {
+      padding: 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      background-color: #e6e1da;
+    }
+    .box {
+      max-width: 400px;
+      margin: 20px;
+    }
+    h1, h2 {
+      color: black;
+    }
+    .box h3 {
+      color: #f97316;
+    }
+  </style>
 </head>
 <body>
-
-    <header>
-        <h1>AirBNB 2.0</h1>
-    </header>
+  <header>
+    <h1 class="highlight">ABOUT US</h1>
+    <h2>We Help You Discover the World</h2>
     <nav>
-        <a href="homepage.html">Home</a>
-        <a href="aboutus.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="locations.html">Locations</a>
+      <a href="#">Home</a>
+      <a href="#">About us</a>
+      <a href="#">Contact us</a>
+      <a href="#">Locations</a>
     </nav>
+  </header>
 
-    <div class="container">
-        <h1>About us</h1>
-        <p>Welcome to <strong>AirBNB 2.0</strong> -your go-to platform for finding cozy, stylish, and unique places to stay around the world.</p>
-        <br>
-        <p>We believe that where you stay should be just as memorable as your destination. From beach houses in Miami to apartaments in Istanbul, we connect travelers with amazing spots that feel like home. </p>
-        <br>
-        <p>Our mission is simple: <em>cheap spots, great vibes,anywhere you want.</em>Whether youre planning a relaxing vacation, a business trip, or a spontaneous getaway, we're here to help you find the perfect place.</p>
+  <section class="section">
+    <div class="box">
+      <h3>WHAT WE STAND FOR</h3>
+      <h2>We are passionate about travel adventures.</h2>
     </div>
-
-    <footer>
-        &copy; 2025 AirBNB 2.0 - All rights reserved.
-    </footer>
+    <div class="box">
+      <h3>OUR MISSION</h3>
+      <h4>We Make Travel Accessible & Enjoyable</h4>
+      <p>Our goal is to provide personalized travel experiences that open minds and hearts to the wonders of the world.</p>
+    </div>
+    <div class="box">
+      <h3>OUR VISION</h3>
+      <h4>Explore With Confidence</h4>
+      <p>We envision a world where everyone can travel safely, affordably, and meaningfully, discovering cultures and creating memories.</p>
+    </div>
+    <div class="box">
+      <h3>WE’RE MAKING A HUGE DIFFERENCE</h3>
+      <p>We believe in sustainable travel that supports local communities and preserves the beauty of our planet for future explorers.</p>
+    </div>
+  </section>
+   <footer style="background-color: darkgoldenrod; color: white; text-align: center; padding: 30px 20px;">
+    <p>&copy; 2025 AirBNB 2.0. All rights reserved.</p>
+    <p>
+      <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Privacy Policy</a> |
+      <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Terms of Service</a>
+    </p>
+  </footer>
 </body>
 </html>
