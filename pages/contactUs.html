@@ -113,6 +113,20 @@
       margin: 10px 0;
       font-size: 18px;
     }
+
+    #sendBtn {
+      width: 100%;
+      padding: 12px;
+      background-color: #cf9e33;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #sendBtn:hover {
+      background-color: #b88528;
+    
   </style>
 </head>
 <body>
@@ -146,10 +160,21 @@
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="5"></textarea>
 
-      <button type="submit">Send Message</button>
+      <button id="sendBtn">Send Message</button>
     </form>
   </main>
+  <script>
+  document.getElementById('sendBtn').addEventListener('click', function() {
+    const message = document.getElementById('message').value.trim();
+    if (message !== "") {
+      alert('You sent the message');
+    } else {
+      alert('Please write a message before sending.');
+    }
+  });
+</script>
 
+  
   <footer class="contact-info">
     <h3>Get in Touch</h3>
     <p>We'd love to hear from you. Reach out anytime!</p>
