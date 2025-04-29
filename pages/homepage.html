@@ -2,129 +2,260 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My BnB</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: sans-serif;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      width: 500%; /* 5 slides, each occupying 100% */
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      position: relative;
+      width: 100vw; /* Each slide takes 100% of the viewport width */
+      height: 100vh;
+    }
+
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+      letter-spacing: 2px;
+      font-family: 'Arial', sans-serif;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+
+    .button-overlay {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: goldenrod;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      z-index: 1;
+    }
+
+    .button-overlay:hover {
+      background-color: #ffa500;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 15px;
+      z-index: 10;
+    }
+
+    .arrow-left {
+      left: 10px;
+    }
+
+    .arrow-right {
+      right: 10px;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 20;
+      width: 100%;
+      padding: 20px;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 40px 0 10px;
+    }
+
+    .listing-card {
+      width: 300px;
+      background-color: #f7f7f7;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin: 10px;
+    }
+
+    .listing-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .listings {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      background-color: #fff;
+    }
+
+    section {
+      text-align: center;
+      padding: 40px;
+      background-color: #fff;
+    }
+
+    input[type="email"] {
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: goldenrod;
+      color: #fff;
+      border: none;
+      margin-left: 10px;
+    }
+    
+.button-overlay {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: goldenrod;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s ease; 
+}
+
+.button-overlay:hover {
+  background-color: transparent; 
+  border-color: black; 
+  color: black; 
+}
+
+.button-overlay:focus {
+  outline: none; 
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.7); 
+}
+
+  </style>
 </head>
 <body>
-  <header>
-    <h1>AirBNB 2.0</h1>
-    <nav class="nav-links">
-      <a href="homepage.html">Home</a>
+
+  <div class="slider-container">
+    <header>
+      <h1>AirBNB 2.0</h1>
+      <nav class="nav-links">
+        <a href="homepage.html">Home</a>
         <a href="aboutus.html">About Us</a>
         <a href="contactUs.html">Contact Us</a>
         <a href="signup.html">Sign Up</a>
-    
-    </nav>
-  </header>
+      </nav>
+    </header>
 
+    <div class="slider" id="slider">
+      <div class="slide">
+        <img src="https://media.cntraveler.com/photos/5f63e469b981fb78a3045f6d/master/w_960,c_limit/Malibu.jpg" alt="Slide 1">
+        <div class="text-overlay">BOOK NOW!!</div>
+        <button class="button-overlay">Book Your Stay</button>
+      </div>
+      <div class="slide">
+        <img src="https://gardenandgun.com/wp-content/uploads/2024/02/Atlantic-Beach_Terry-Ward.jpg" alt="Slide 2">
+        <div class="text-overlay">BOOK NOW!!</div>
+        <button class="button-overlay">Book Your Stay</button>
+      </div>
+      <div class="slide">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuXUmqEei5Gww7amPvUNY1p5JiuT8vxiV9zT0DiaELxkQR7J5YzQ&s=10&ec=72940545" alt="Slide 3">
+        <div class="text-overlay">BOOK NOW!!</div>
+        <button class="button-overlay">Book Your Stay</button>
+      </div>
+      <div class="slide">
+        <img src="https://www.rollingstone.com/wp-content/uploads/2023/10/Screenshot-2023-10-31-at-3.53.26-PM.png?w=1024" alt="Slide 4">
+        <div class="text-overlay">BOOK NOW!!</div>
+        <button class="button-overlay">Book Your Stay</button>
+      </div>
+      <div class="slide">
+        <img src="https://i0.wp.com/luxurytravelhacks.com/wp-content/uploads/2019/07/Airbnb-Bondi-Beach-Airbnb-Luxe-Luxury-Travel-Hacks.jpg?fit=803%2C484&ssl=1" alt="Slide 5">
+        <div class="text-overlay">BOOK NOW!!</div>
+        <button class="button-overlay">Book Your Stay</button>
+      </div>
+    </div>
 
-
-  
+    <button class="arrow arrow-left" onclick="moveSlide(-1)">&#8592;</button>
+    <button class="arrow arrow-right" onclick="moveSlide(1)">&#8594;</button>
+  </div>
 
   <h1>Explore AirBNB 2.0</h1>
   <section class="listings">
-    <div class="listing-card">
-      <img src="../images/lossantos.jpg" alt="Cozy apartment" />
-      <h3>Apartment in Los Santos</h3>
-      <h3>Where: America,Los Santos </h3>
-      <p>$120/night</p>
-    </div>
-    <div class="listing-card">
-      <img src="../images/Hero_-_A_six-bedroom_oceanfront_mansion_with_a_pool_in_Miami_Beach.jpg" alt="Beach house" />
-      <h3>Beach House in Miami</h3>
-      <h3>Where:United Stated Of America,Miami</h3>
-      <p>$250/night</p>
-    </div>
-    <div class="listing-card">
-      <img src="../images/113284747.jpg" alt="Cabin in woods" />
-      <h3>Cabin in the Woods</h3>
-      <h3>Where: Find it Your Self</h3>
-      <p>$180/night</p>
-    </div>
-    <div class="listing-card">
-      <img src="../images/miami.jpg" alt="Cozy apartment" />
-      <h3>Cozy Apartment in Miami</h3>
-      <h3>Where: Miami, 2900 Biscayne Blvd, Miami, FL 33137</h3>
-      <p>$200/night</p>
-    </div>
-    <div class="listing-card">
-      <img src="../images/dubai2.0.webp" alt="Cozy apartment" />
-      <h3>Cozy Apartment in LA</h3>
-      <h3>Where: United States of America , Los Angelos</h3>
-      <p>$200/night</p>
-    </div>
-    <div class="listing-card">
-      <img src="../images/dubai.jpg" alt="Cozy apartment" />
-      <h3>Cozy Apartment in dubai</h3>
-      <h3>Where:United Arab Emirates, Dubai</h3>
-      <p>$200/night</p>
-    </div>
-   
-    <div class="listing-card">
-      <img src="../images/maldives.jpg" />
-      <h3>Apartment in Maldives</h3>
-      <h3>Where: Maldives</h3>
-      <p>$5,000/night</p>
-    </div>
   
-    <div class="listing-card">
-      <img src="../images/paris.jpg" />
-      <h3>Paris Apartments for Rent: Best Tips by Locals
-        by Elisa</h3>
-        <h3>Where: France, Paris</h3>
-      <p>$5,000/night</p>
-    </div>
-  
-    <div class="listing-card">
-      <img src="../images/albania.jpg" />
-      <h3> Apartments in Albania</h3>
-      <h3>Where: Albaniax1</h3>
-      <p>$223/night</p>
-    </div>
-
-    <div class="listing-card">
-      <img src="../images/istanbul-gezilecek-yerler.jpg" />
-      <h3> Apartments in Instanbull</h3>
-      <h3>Where: Instanbull</h3>
-      <p>$502/night</p>
-    </div>
-   
-    <div class="listing-card">
-      <img src="../images/1.jpg" />
-      <h3> Infinity Pool Suite|Santorini</h3>
-      <h3>Where: Grecce</h3>
-      <p>$502/night</p>
-    </div>
-    
-    <div class="listing-card">
-      <img src="../images/2.jpg" />
-      <h3> Eagles View Suites at Iso Syote</h3>
-      <h3>Where:Finland</h3>
-      <p>$223/night</p>
-      <div>
-    
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
   </section>
+
   <section style="text-align:center; padding: 40px; background-color: #fff;">
     <h2>Join Our Newsletter</h2>
     <p>Get exclusive deals and travel inspiration straight to your inbox.</p>
     <input type="email" placeholder="Your email" style="padding:10px; margin-top:10px;">
     <button style="padding: 10px 20px; background-color:goldenrod; color:#fff; border:none; margin-left:10px;">Subscribe</button>
   </section>
-  
+
+  <script>
+    let currentSlide = 0;
+    const totalSlides = 5;
+
+    function moveSlide(direction) {
+      const slider = document.getElementById("slider");
+      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+      slider.style.transform = `translateX(-${currentSlide * 100}vw)`;
+    }
+  </script>
 </body>
 </html>
