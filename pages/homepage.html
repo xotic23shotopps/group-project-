@@ -23,13 +23,22 @@
   
 
   <h1>Explore AirBNB 2.0</h1>
-  <section class="listings">
-    <div class="listing-card">
-      <img src="../images/lossantos.jpg" alt="Cozy apartment" />
-      <h3>Apartment in Los Santos</h3>
-      <h3>Where: America,Los Santos </h3>
-      <p>$120/night</p>
+  <section class="slideshow">
+    <div class="slides fade">
+      <img src="../images/maldives.jpg" alt="Maldives" />
+      <div class="caption">Luxury in Maldives</div>
     </div>
+    <div class="slides fade">
+      <img src="../images/maldives.jpg" alt="Maldives" />
+      <div class="caption">Luxury in Maldives</div>
+    </div>
+    <div class="slides fade">
+      <img src="../images/maldives.jpg" alt="Maldives" />
+      <div class="caption">Luxury in Maldives</div>
+    </div>
+
+
+    
     <div class="listing-card">
       <img src="../images/Hero_-_A_six-bedroom_oceanfront_mansion_with_a_pool_in_Miami_Beach.jpg" alt="Beach house" />
       <h3>Beach House in Miami</h3>
@@ -105,16 +114,25 @@
       <div>
     
 
-
+        <script>
+          let slideIndex = 0;
+          showSlides();
+      
+          function showSlides() {
+            const slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+              slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); 
+          }
+        </script>
 
     
-
-
-
-
-
-
-
 
 
 
