@@ -15,12 +15,14 @@
       background-color: #D19D36;
       color: white;
       padding: 10px 20px;
+      position: relative;
     }
 
     .header-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .header-container h1 {
@@ -28,18 +30,24 @@
     }
 
     nav {
-      display: flex;
-      gap: 20px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
     }
 
     nav a {
       color: white;
+      margin-left: 20px;
       text-decoration: none;
       font-weight: bold;
+      border: 1px solid white;
+      padding: 8px 16px;
+      border-radius: 5px;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      background-color: white;
+      color: #D19D36;
     }
 
     .contact-section {
@@ -126,20 +134,18 @@
 
     #sendBtn:hover {
       background-color: #b88528;
-    
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="header-container">
       <h1>Contact Us</h1>
-
       <nav class="nav-links">
         <a href="homepage.html">Home</a>
-          <a href="aboutus.html">About Us</a>
-          <a href="contactUs.html">Contact Us</a>
-          <a href="signup.html">Sign up</a>
-      
+        <a href="aboutus.html">About Us</a>
+        <a href="contactUs.html">Contact Us</a>
+        <a href="signup.html">Sign Up</a>
       </nav>
     </div>
   </header>
@@ -163,18 +169,19 @@
       <button id="sendBtn">Send Message</button>
     </form>
   </main>
-  <script>
-  document.getElementById('sendBtn').addEventListener('click', function() {
-    const message = document.getElementById('message').value.trim();
-    if (message !== "") {
-      alert('You sent the message');
-    } else {
-      alert('Please write a message before sending.');
-    }
-  });
-</script>
 
-  
+  <script>
+    document.getElementById('sendBtn').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent form submission
+      const message = document.getElementById('message').value.trim();
+      if (message !== "") {
+        alert('You sent the message');
+      } else {
+        alert('Please write a message before sending.');
+      }
+    });
+  </script>
+
   <footer class="contact-info">
     <h3>Get in Touch</h3>
     <p>We'd love to hear from you. Reach out anytime!</p>
