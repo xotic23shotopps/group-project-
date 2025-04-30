@@ -150,6 +150,34 @@ nav a:hover::after {
   align-items: center;
   justify-content: center;
 }
+.slideshow {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  padding-top: 30px;
+}
 
+.slides {
+  display: none;
+  position: relative;
+}
+
+.slides img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.caption {
+  color: #fff;
+  font-size: 20px;
+  padding: 8px 16px;
+  position: absolute;
+  bottom: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
 
 
