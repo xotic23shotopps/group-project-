@@ -13,7 +13,7 @@ function showSlides() {
   if (slides.length > 0) {
     slides[slideIndex - 1].style.display = "block";
   }
-  setTimeout(showSlides, 3000); // Change every 3 sec
+  setTimeout(showSlides, 1500); 
 }
 
 
@@ -22,7 +22,7 @@ subscribeBtn.addEventListener("click", () => {
   const emailInput = document.querySelector('input[type="email"]');
   if (emailInput.value) {
     alert("Thanks for subscribing!");
-    emailInput.value = ""; // Reset field
+    emailInput.value = ""; 
   } else {
     alert("Please enter your email first.");
   }
