@@ -5,6 +5,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <title>About Us - AirBNB 2.0</title>
  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+ <!-- ndryshon fontin -->
  <style>
   body {
     font-family: 'Inter', sans-serif;
@@ -13,7 +14,7 @@
     background: #f4f4f4;
     color: #333;
   }
-
+/* vendose sendet e vende nese hiqet nuk kemi asgje perveq about us *(text) */
   header {
     background: url('aboutus.webp') no-repeat center center/cover;
     color: white;
@@ -21,7 +22,7 @@
     padding: 100px 20px;
     position: relative;
   }
-
+/* ndryshon ngjyren dhe dizajnimin e background-it */
   header::after {
     content: "";
     position: absolute;
@@ -32,18 +33,18 @@
     background-color: darkgoldenrod;
     z-index: 1;
   }
-
+/* pa kte funksion nuk eshte visible asgje (about us text, dhe nav bar) */
   header * {
     position: relative;
     z-index: 2;
   }
-
+/* ndreq pozicionin e nav bar-it */
   nav {
     position: absolute;
     top: 20px;
     right: 20px;
   }
-
+/* nav a ben dizajnimin e linqeve */
   nav a {
     color: white;
     margin-left: 20px;
@@ -54,7 +55,7 @@
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
   }
-
+/* jep nje efekt kur mausi eshte mbi te */
   nav a:hover {
     background-color: white;
     color: darkgoldenrod;
@@ -72,7 +73,7 @@
   header h2 {
     color: white;
   }
-
+/* nese nuk kemi section texti i vendosur ne box hiqet prej saj */
   .section {
     padding: 60px 20px;
     display: flex;
@@ -80,7 +81,7 @@
     justify-content: space-around;
     background-color: #e6e1da;
   }
-
+/* nuk vendosen te gjitha ne rend  */
   .box {
     max-width: 400px;
     margin: 20px;
@@ -96,6 +97,7 @@
  </style>
 </head>
 <body>
+  <!-- vendos textin "ABout Us" dhe rregullon linqet nav bar -->
  <header>
    <h1 class="highlight">ABOUT US</h1>
    <h2>We Help You Discover the World</h2>
